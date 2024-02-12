@@ -15,12 +15,12 @@ y = data.iloc[:, -1].values
 
 # Gradient Descent
 def compute_cost(X, y, theta):
-    return np.sum(np.square(X @ theta.T - y)) / (2 * len(X))
+    return np.sum(np.square(X @ theta - y)) / (2 * len(X))
 
 def gradient_descent(X, y, theta, alpha, iters):
     cost_history = []
     for _ in range(iters):
-        theta = theta - (alpha / len(X)) * np.sum((X @ theta.T - y) * X, axis=0)
+        theta = theta - (alpha / len(X)) * (X.T @ (X @ theta - y))
         cost_history.append(compute_cost(X, y, theta))
     return theta, cost_history
 
