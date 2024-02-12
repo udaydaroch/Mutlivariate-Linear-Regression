@@ -5,7 +5,6 @@ This repository contains a Python script implementing multivariate linear regres
 Key Components:
 
 Data Loading and Preprocessing:
-
 The script loads the housing data from a CSV file and preprocesses it by standardizing the features using z-score normalization.
 
 Gradient Descent Optimization:
