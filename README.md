@@ -7,17 +7,17 @@ Key Components:
 Data Loading and Preprocessing:
 
 The script loads the housing data from a CSV file and preprocesses it by standardizing the features using z-score normalization.
+
 Gradient Descent Optimization:
-
 It defines a gradient descent function to iteratively update model parameters to minimize the mean squared error (MSE) cost function.
+
 Cost Function Calculation:
-
 The cost function calculates the MSE between predicted and actual house prices to measure the model's performance.
+
 Hyperparameters Setting:
-
 Hyperparameters such as learning rate and number of iterations are set to control the optimization process.
-Results Visualization:
 
+Results Visualization:
 The script visualizes the convergence behavior of the gradient descent algorithm by plotting the cost function over the iterations.
 Usage:
 
