@@ -28,6 +28,6 @@ References:
 
 For more details on multivariate linear regression and gradient descent, refer to relevant literature on machine learning and optimization.
 Author:
-Tan Moy (https://medium.com/we-are-orb/multivariate-linear-regression-in-python-without-scikit-learn-7091b1d45905)
-Uday Daroch
+the code was inspired by Tan Moy (https://medium.com/we-are-orb/multivariate-linear-regression-in-python-without-scikit-learn-7091b1d45905)
+
 
