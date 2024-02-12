@@ -9,9 +9,9 @@ data = pd.read_csv('home.txt', names=["size", "bedroom", "price"])
 data = (data - data.mean()) / data.std()
 
 # Extract features and target
-X = data.iloc[:, :-1]
-X.insert(0, 'Ones', 1)  # Add intercept term
-y = data.iloc[:, -1]
+X = data.iloc[:, :-1].values
+X = np.insert(X, 0, 1, axis=1)  # Add intercept term
+y = data.iloc[:, -1].values
 
 # Gradient Descent
 def compute_cost(X, y, theta):
@@ -29,8 +29,8 @@ alpha = 0.01
 iters = 1000
 
 # Train model
-theta, cost_history = gradient_descent(X.values, y.values, theta, alpha, iters)
-final_cost = compute_cost(X.values, y.values, theta)
+theta, cost_history = gradient_descent(X, y, theta, alpha, iters)
+final_cost = compute_cost(X, y, theta)
 
 # Plot cost over iterations
 plt.plot(np.arange(iters), cost_history, 'r')  
